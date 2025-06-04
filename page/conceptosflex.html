@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa: Flexbox y CSS Grid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="../estai/concepflexboxStyle.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Guía Completa de Flexbox y CSS Grid</h1>
+            <p>Domina los sistemas de layout modernos de CSS</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#intro">Introducción</a></li>
+            <li><a href="#flexbox">Flexbox</a></li>
+            <li><a href="#grid">CSS Grid</a></li>
+            <li><a href="#comparison">Comparación</a></li>
+            <li><a href="#examples">Ejemplos</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Transforma tu forma de diseñar layouts</h2>
+            <p>Aprende a crear diseños complejos y responsivos con las tecnologías más poderosas de CSS</p>
+        </div>
+    </section>
+
+    <section id="intro">
+        <div class="container">
+            <div class="section-title">
+                <h2>Introducción</h2>
+            </div>
+            <p>Flexbox y CSS Grid son dos sistemas de layout que han revolucionado la forma en que creamos diseños web. Mientras que Flexbox es ideal para diseños unidimensionales (en una fila o columna), CSS Grid es perfecto para layouts bidimensionales complejos.</p>
+            
+            <div class="comparison">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-align-justify"></i>
+                    </div>
+                    <h3>Flexbox</h3>
+                    <p>Sistema unidimensional para diseñar layouts en una sola dimensión (filas o columnas). Perfecto para componentes y diseños pequeños.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <h3>CSS Grid</h3>
+                    <p>Sistema bidimensional que permite controlar tanto filas como columnas simultáneamente. Ideal para layouts complejos y estructuras generales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="flexbox" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flexbox</h2>
+            </div>
+            
+            <h3>Conceptos Clave</h3>
+            <p>Flexbox se basa en un modelo de contenedor y elementos hijos (flex items). El contenedor flex define cómo se distribuyen los elementos dentro de él.</p>
+            
+            <div class="visual-example">
+                <h4>Ejemplo Visual:</h4>
+                <div class="example-container">
+                    <div class="example-item">1</div>
+                    <div class="example-item">2</div>
+                    <div class="example-item">3</div>
+                    <div class="example-item">4</div>
+                    <div class="example-item">5</div>
+                </div>
+                
+                <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}</code></pre>
+            </div>
+            
+            <h3>Propiedades Principales</h3>
+            <table class="properties-table">
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                        <th>Valores comunes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>display: flex</code></td>
+                        <td>Define un contenedor flex</td>
+                        <td>flex | inline-flex</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-direction</code></td>
+                        <td>Dirección de los elementos</td>
+                        <td>row | row-reverse | column | column-reverse</td>
+                    </tr>
+                    <tr>
+                        <td><code>justify-content</code></td>
+                        <td>Alineación en el eje principal</td>
+                        <td>flex-start | flex-end | center | space-between | space-around | space-evenly</td>
+                    </tr>
+                    <tr>
+                        <td><code>align-items</code></td>
+                        <td>Alineación en el eje cruzado</td>
+                        <td>flex-start | flex-end | center | baseline | stretch</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-wrap</code></td>
+                        <td>Permite el ajuste de línea</td>
+                        <td>nowrap | wrap | wrap-reverse</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap</code></td>
+                        <td>Espacio entre elementos</td>
+                        <td>Valores en px, rem, em, etc.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Casos de Uso</h3>
+            <div class="use-cases">
+                <div class="use-case">
+                    <h4><i class="fas fa-check-circle"></i> Menús de navegación</h4>
+                    <p>Perfecto para crear menús horizontales o verticales con distribución uniforme.</p>
+                </div>
+                <div class="use-case">
+                    <h4><i class="fas fa-check-circle"></i> Centrado vertical</h4>
+                    <p>La forma más sencilla de centrar elementos vertical y horizontalmente.</p>
+                </div>
+                <div class="use-case">
+                    <h4><i class="fas fa-check-circle"></i> Controles de formulario</h4>
+                    <p>Alinear etiquetas y campos de formulario de manera consistente.</p>
+                </div>
+                <div class="use-case">
+                    <h4><i class="fas fa-check-circle"></i> Tarjetas de productos</h4>
+                    <p>Crear filas de elementos con altura uniforme independientemente del contenido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="grid">
+        <div class="container">
+            <div class="section-title">
+                <h2>CSS Grid</h2>
+            </div>
+            
+            <h3>Conceptos Clave</h3>
+            <p>CSS Grid permite crear layouts complejos dividiendo el espacio en filas y columnas. Se basa en un sistema de rejilla con áreas nombradas.</p>
+            
+            <div class="visual-example">
+                <h4>Ejemplo Visual:</h4>
+                <div class="grid-example">
+                    <div class="example-item">Header</div>
+                    <div class="example-item">Sidebar</div>
+                    <div class="example-item">Main</div>
+                    <div class="example-item">Footer</div>
+                </div>
+                
+                <pre><code>.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 1rem;
+}</code></pre>
+            </div>
+            
+            <h3>Propiedades Principales</h3>
+            <table class="properties-table">
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Descripción</th>
+                        <th>Valores comunes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>display: grid</code></td>
+                        <td>Define un contenedor grid</td>
+                        <td>grid | inline-grid</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-template-columns</code></td>
+                        <td>Define las columnas de la rejilla</td>
+                        <td>fr, px, %, auto, minmax(), repeat()</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-template-rows</code></td>
+                        <td>Define las filas de la rejilla</td>
+                        <td>fr, px, %, auto, minmax(), repeat()</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-template-areas</code></td>
+                        <td>Asigna nombres a áreas de la rejilla</td>
+                        <td>Nombres de áreas</td>
+                    </tr>
+                    <tr>
+                        <td><code>gap</code></td>
+                        <td>Espacio entre celdas</td>
+                        <td>Valores en px, rem, em, etc.</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid-column/grid-row</code></td>
+                        <td>Posicionamiento de elementos hijos</td>
+                        <td>Números de línea, span, nombres de área</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Casos de Uso</h3>
+            <div class="use-cases">
+                <div class="use-case">
+                    <h4><i class="fas fa-check-circle"></i> Layouts de página completa</h4>
+                    <p>Estructuras complejas con header, footer, sidebar y contenido principal.</p>
+                </div>
+                <div class="use-case">
+                    <h4><i class="fas fa-check-circle"></i> Galerías de imágenes</h4>
+                    <p>Crear mosaicos de imágenes con diferentes tamaños y proporciones.</p>
+                </div>
+                <div class="use-case">
+                    <h4><i class="fas fa-check-circle"></i> Dashboard</h4>
+                    <p>Organizar widgets y componentes en una cuadrícula flexible.</p>
+                </div>
+                <div class="use-case">
+                    <h4><i class="fas fa-check-circle"></i> Diseños asimétricos</h4>
+                    <p>Crear layouts artísticos que rompan con la estructura tradicional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Cuándo usar cada uno?</h2>
+            </div>
+            
+            <div class="comparison">
+                <div class="card">
+                    <h3>Usa Flexbox cuando...</h3>
+                    <ul>
+                        <li>Necesitas distribuir elementos en una sola dimensión (fila o columna)</li>
+                        <li>Tienes un conjunto lineal de elementos que deben alinearse de cierta manera</li>
+                        <li>Quieres controlar el espacio entre elementos de manera uniforme</li>
+                        <li>Necesitas centrar elementos vertical u horizontalmente</li>
+                        <li>Trabajas con componentes pequeños como menús, barras de herramientas o grupos de botones</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Usa CSS Grid cuando...</h3>
+                    <ul>
+                        <li>Necesitas controlar el layout en dos dimensiones (filas y columnas)</li>
+                        <li>Quieres crear estructuras complejas con áreas nombradas</li>
+                        <li>Necesitas superponer elementos o crear layouts asimétricos</li>
+                        <li>Trabajas con el layout general de la página</li>
+                        <li>Quieres crear diseños responsivos sin necesidad de media queries</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>¿Puedo usarlos juntos?</h3>
+                <p>¡Absolutamente! Flexbox y CSS Grid no son excluyentes. De hecho, se complementan perfectamente. Puedes usar:</p>
+                <ul>
+                    <li><strong>CSS Grid</strong> para el layout general de la página</li>
+                    <li><strong>Flexbox</strong> para los componentes dentro de cada área del grid</li>
+                </ul>
+                <p>Esta combinación ofrece el máximo poder y flexibilidad para crear diseños modernos y responsivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="examples">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ejemplos Prácticos</h2>
+            </div>
+            
+            <h3>Ejemplo 1: Layout de página con Grid + componentes con Flexbox</h3>
+            <pre><code>&lt;div class="page-layout"&gt;
+    &lt;header&gt;Header&lt;/header&gt;
+    &lt;nav&gt;
+        &lt;ul class="nav-menu"&gt;
+            &lt;li&gt;Inicio&lt;/li&gt;
+            &lt;li&gt;Productos&lt;/li&gt;
+            &lt;li&gt;Contacto&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;main&gt;Contenido principal&lt;/main&gt;
+    &lt;aside&gt;Sidebar&lt;/aside&gt;
+    &lt;footer&gt;Footer&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    .page-layout {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "footer footer";
+        min-height: 100vh;
+    }
+    
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+&lt;/style&gt;</code></pre>
+            
+            <h3>Ejemplo 2: Galería responsiva</h3>
+            <pre><code>&lt;div class="gallery"&gt;
+    &lt;div class="gallery-item"&gt;&lt;/div&gt;
+    &lt;div class="gallery-item"&gt;&lt;/div&gt;
+    &lt;div class="gallery-item"&gt;&lt;/div&gt;
+    &lt;!-- más items --&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    
+    @media (max-width: 600px) {
+        .gallery {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+&lt;/style&gt;</code></pre>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>¿Listo para dominar Flexbox y CSS Grid?</h3>
+            <p>Practica con estos conceptos y transforma tu forma de crear layouts web.</p>
+            
+            <div class="footer-links">
+                <a href="#">Inicio</a>
+                <a href="#flexbox">Flexbox</a>
+                <a href="#grid">CSS Grid</a>
+                <a href="#comparison">Comparación</a>
+                <a href="#examples">Ejemplos</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-codepen"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <p>&copy; 2023 Guía de Flexbox y CSS Grid. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Botón "Volver arriba"
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scrolling para los enlaces del menú
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
